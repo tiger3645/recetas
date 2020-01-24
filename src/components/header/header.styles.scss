@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+
+    .title {
+        font-family: "Courgette", cursive;
+        font-size: 3rem;
+        color: #2e282a;
+        padding: 1rem 3rem;
+        margin: 0;
+        border: solid #ef3e36 1px;
+        border-radius: 10px 0 10px 0;
+        transition: all 0.2s;
+
+
+        &:hover {
+            background-color: #ef3e36;
+        }
+    }
+}

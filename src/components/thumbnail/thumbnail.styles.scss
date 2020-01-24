@@ -1,0 +1,28 @@
+.thumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 200px;
+    border: solid #17bebb 1px;
+    border-radius: 3%;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: #17bebb;
+        // cursor: pointer;
+    }
+
+    .thumb-title {
+        font-family: 'Courgette', cursive;
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .thumb-description {
+        text-align: center;
+    }
+}
