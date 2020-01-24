@@ -33,6 +33,7 @@ class Home extends React.Component {
     const filteredRecipees = recipees.filter(recipee =>
       recipee.title.toLowerCase().includes(searchField.toLowerCase())
     );
+    document.title = "Recetas";
     return (
       <div className="home">
         {this.state.loading ? (

@@ -15,6 +15,7 @@ class Recipee extends React.Component {
             if (loading) return <Logo />;
             if (error) return <h2>Error obteniendo datos</h2>;
 
+            document.title = `${data.Recipee.title} | Recetas`;
             return (
               <React.Fragment>
                 <h2>{data.Recipee.title}</h2>
