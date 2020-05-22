@@ -20,7 +20,9 @@ class App extends React.Component {
           </Switch>
           <hr />
           <div className="link">
-            <a href="http://emcipriani.com/">emcipriani.com</a>
+            <a href="http://emcipriani.com/" target="_blank">
+              emcipriani.com
+            </a>
           </div>
         </div>
       </ApolloProvider>

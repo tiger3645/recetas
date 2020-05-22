@@ -6,8 +6,6 @@ export const ALL_RECIPEES = gql`
       id
       title
       description
-      ingredients
-      preparation
     }
   }
 `;
