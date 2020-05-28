@@ -12,25 +12,25 @@ class Home extends React.Component {
     this.state = {
       loading: true,
       searchField: "",
-      recipees: []
+      recipees: [],
     };
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     this.setState({ searchField: e.target.value });
   };
 
   componentDidMount() {
     Client.query({
-      query: ALL_RECIPEES
+      query: ALL_RECIPEES,
     })
-      .then(data => this.setState({ recipees: data.data.allRecipees }))
+      .then((data) => this.setState({ recipees: data.data.allRecipees }))
       .then(this.setState({ loading: false }));
   }
 
   render() {
     const { recipees, searchField } = this.state;
-    const filteredRecipees = recipees.filter(recipee =>
+    const filteredRecipees = recipees.filter((recipee) =>
       recipee.title.toLowerCase().includes(searchField.toLowerCase())
     );
     document.title = "Recetas";

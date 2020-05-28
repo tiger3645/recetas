@@ -11,12 +11,13 @@ export const ALL_RECIPEES = gql`
 `;
 
 export const RECIPEE = gql`
-  query Recipee($id: ID) {
-    Recipee(id: $id) {
-      id
+  query recipee($id: Int) {
+    recipee(id: $id) {
       title
       description
-      ingredients
+      ingredientSet {
+        description
+      }
       preparation
     }
   }

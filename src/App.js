@@ -20,7 +20,11 @@ class App extends React.Component {
           </Switch>
           <hr />
           <div className="link">
-            <a href="http://emcipriani.com/" target="_blank">
+            <a
+              href="http://emcipriani.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               emcipriani.com
             </a>
           </div>

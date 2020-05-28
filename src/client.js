@@ -5,12 +5,12 @@ import { URL } from "./Constants";
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: URL
+  uri: URL,
 });
 
 const client = new ApolloClient({
   cache,
-  link
+  link,
 });
 
 export default client;

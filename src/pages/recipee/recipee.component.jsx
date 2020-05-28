@@ -8,6 +8,7 @@ import { ReactComponent as Logo } from "../../assets/icon.svg";
 class Recipee extends React.Component {
   render() {
     const { id } = this.props.match.params;
+
     return (
       <div className="recipee">
         <Query query={RECIPEE} variables={{ id }}>
@@ -15,20 +16,20 @@ class Recipee extends React.Component {
             if (loading) return <Logo />;
             if (error) return <h2>Error obteniendo datos</h2>;
 
-            document.title = `${data.Recipee.title} | Recetas`;
+            document.title = `${data.recipee.title} | Recetas`;
             return (
               <React.Fragment>
-                <h2>{data.Recipee.title}</h2>
-                <p>{data.Recipee.description}</p>
+                <h2>{data.recipee.title}</h2>
+                <p>{data.recipee.description}</p>
                 <h3>Ingredientes</h3>
                 <ul>
-                  {data.Recipee.ingredients.map((ingredient, i) => (
-                    <li key={i}>{ingredient}</li>
+                  {data.recipee.ingredientSet.map((ingredient, i) => (
+                    <li key={i}>{ingredient.description}</li>
                   ))}
                 </ul>
                 <h3>Preparación</h3>
                 <ReactMarkdown
-                  source={data.Recipee.preparation}
+                  source={data.recipee.preparation}
                   linkTarget="_blank"
                 />
               </React.Fragment>
